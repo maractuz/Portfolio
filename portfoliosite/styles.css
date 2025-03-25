@@ -1,0 +1,117 @@
+:root{
+  --bgcolor: rgb(45, 41, 38);
+  --fontcolor: rgb(232, 230, 225);
+  --headercolor: #6fae50;
+  --linkcolor: #a5c894;
+  --linkhovercolor: #5998c9;
+  --containerbgcolor: #758d84;
+  --divbgcolor: #1e2422;
+  --footerbgcolor: #48523e;
+
+  --bradius: 40px;
+}
+
+body {
+    background-color: rgb(45, 41, 38);
+    color: rgb(232, 230, 225);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+/*for many of the styling decisions on this page, i decided on natural
+greens for most highlights and some very desaturated browns in to make
+the hard black and white that this page previously had a little more
+tolerable. i took many notes from the JavaJam homework stuff in terms
+of how i could style a basic website. i wanted to keep it homey but
+still with a little bit of pop on highlighted elements with some
+blues that stand out against the warmer palette.*/
+
+  h1, h2, h3 {
+    color: var(--headercolor);
+  }
+  
+  a {
+    color: var(--linkcolor);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: var(--linkhovercolor);
+  }
+  
+  /*define footer contents, probably find a way to push down a bit*/
+  footer{
+    background-color: var(--footerbgcolor);
+    font-size: .60em;
+    text-align: center;
+    font-style: italic;
+    margin: 0 20px;
+    padding: 20px;
+    border-radius: var(--bradius);
+  }
+  
+  /*used for body content*/
+  .flex-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--containerbgcolor);
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+  }
+
+  .flex-container > div{
+    background-color: var(--divbgcolor);
+    margin: 10px;
+    padding: 10px;
+    border-radius: var(--bradius);
+  }
+  
+  .nav {
+    background-color: var(--footerbgcolor);
+    margin-bottom: 40px;
+    margin: 0 20px;
+    border-radius: var(--bradius);
+  }
+  
+  
+  .timeline {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  
+  .timeline-item {
+    margin-bottom: 20px;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid var(--linkcolor);
+    border-radius: 6px;
+    transition: .3s;
+  }
+  
+  .gallery img:hover{
+    border: 2px solid var(--linkhovercolor);
+    scale: 1.5;
+    transition: .3s;
+  }
+
